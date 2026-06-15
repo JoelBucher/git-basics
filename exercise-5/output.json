@@ -1,28 +1,28 @@
 {
-  "key": "dfbf7fd1-ccb1-4d23-afbb-9a8236365771",
+  "key": "f51c3c6c-1f2c-4e2f-b8b3-764bd2e76faa",
   "name": "5: The Midnight Typo",
   "description": "",
   "elements": [
     {
-      "key": "647ebdda-436c-4370-897f-c505f1555980",
+      "key": "54656c23-b73f-4c44-b8b3-9be6c4e1348d",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "540a8eae-742c-46de-bb3e-3e2d62977e7e",
+        "key": "088e9683-dfab-49cd-b019-b6e0186dbec9",
         "markdown": "# 5: The Midnight Typo\n\nYou just committed a critical bug fix, but in your sleep-deprived state, you made two mistakes:\n1. You made a glaring typo in the commit message (`manger` instead of `manager`).\n2. You forgot to include the updated `config.json` file which actually enables the fix.\n\nInstead of making a second \"fix typo/oops\" commit, use Git's amendment powers to fix both issues in the *very last commit*.\n\n## Objectives\n\n1. Stage the forgotten `config.json` file.\n2. Amend the previous commit to include this file **and** fix the typo in the commit message.\n3. The final commit message should be: `\"fix: update manager config\"`",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "9b41af5e-cd81-4ccd-a64b-cac255a812f2"
+          "key": "c905fb08-fef2-43cc-8bb8-e1a797d178e0"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gJ3sidGltZW91dCI6IDMwfScgPiBjb25maWcuanNvbgplY2hvICJjbGFzcyBDb25uZWN0aW9uTWFuYWdlcjogcGFzcyIgPiBtYW5hZ2VyLnB5CmdpdCBhZGQgY29uZmlnLmpzb24gbWFuYWdlci5weQpnaXQgY29tbWl0IC1tICJjaG9yZTogaW5pdGlhbCBjb21taXQiCgplY2hvICJjbGFzcyBDb25uZWN0aW9uTWFuYWdlcjogZGVmIGNvbm5lY3Qoc2VsZik6IHBhc3MiID4gbWFuYWdlci5weQplY2hvICd7InRpbWVvdXQiOiA2MH0nID4gY29uZmlnLmpzb24KCmdpdCBhZGQgbWFuYWdlci5weQpnaXQgY29tbWl0IC1tICJmaXg6IHVwZGF0ZSBjb25uZWN0aW9uIG1hbmdlciBjb25maWd1cmF0aW9uIg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "3992ed75-a36a-4a1c-a1f8-ad77a0516b3a",
+            "key": "ef60a3b8-59df-495f-bc33-89eb386b11b1",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,14 @@
             "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gU3RhZ2UgdGhlIGZvcmdvdHRlbiBjb25maWd1cmF0aW9uIGZpbGUKZ2l0IGFkZCBjb25maWcuanNvbgoKIyAyLiBBbWVuZCB0aGUgbGFzdCBjb21taXQgd2l0aCB0aGUgY29ycmVjdGVkIG1lc3NhZ2UgYW5kIHRoZSBuZXdseSBzdGFnZWQgZmlsZQpnaXQgY29tbWl0IC0tYW1lbmQgLW0gImZpeDogdXBkYXRlIGNvbm5lY3Rpb24gbWFuYWdlciBjb25maWd1cmF0aW9uIgoKIyAzLiBWZXJpZnkgdGhlIHJlc3VsdAplY2hvICItLS0gVXBkYXRlZCBMYXN0IENvbW1pdCBMb2cgLS0tIgpnaXQgbG9nIC0xIC0tc3RhdA==",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "ac4ede57-5f58-4b10-8304-52ef94610b4a",
+            "key": "9114e4b4-9f5f-45fb-83eb-f5538b629b93",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "322630bb-cf32-4b61-8a61-a6028a9e978f",
+            "key": "7abd2e48-b5de-48a9-9ee7-255d0d5340ba",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }
