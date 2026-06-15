@@ -2,6 +2,8 @@ import base64
 import json
 from pathlib import Path
 import uuid
+# Third-party library to sweep non-ASCII characters cleanly
+from unidecode import unidecode
 
 
 def generate_uuid():
@@ -10,10 +12,29 @@ def generate_uuid():
 
 
 def file_to_base64(file_path):
-    """Reads a file and returns its content as a base64 encoded string."""
-    with open(file_path, "rb") as f:
-        encoded_bytes = base64.b64encode(f.read())
-        return encoded_bytes.decode("utf-8")
+    """Reads a file, converts/sweeps non-ASCII characters using unidecode
+
+    to guarantee atob() compatibility, and returns its content as a base64 encoded string.
+    """
+    try:
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+            content = f.read()
+
+        # unidecode replaces non-ASCII characters with their closest ASCII equivalents
+        ascii_clean_string = unidecode(content)
+
+        # Convert the safe string to ASCII bytes
+        ascii_bytes = ascii_clean_string.encode("ascii")
+
+        # Base64 encode the safe ASCII bytes
+        return base64.b64encode(ascii_bytes).decode("utf-8")
+    except Exception:
+        # Fallback for binary or heavily mangled files
+        with open(file_path, "rb") as f:
+            raw_bytes = f.read()
+        # Filter out bytes outside ASCII standard range (0-127)
+        ascii_bytes = bytes([b for b in raw_bytes if b < 128])
+        return base64.b64encode(ascii_bytes).decode("utf-8")
 
 
 def read_file_as_string(file_path):
@@ -63,6 +84,8 @@ def process_directories(root_dir_path):
                 readme_path, fallback_name=subfolder.name
             )
             readme_content = read_file_as_string(readme_path)
+
+            # Sweeping non-ASCII characters and fetching base64 versions
             setup_base64 = file_to_base64(setup_path)
             solution_base64 = file_to_base64(solution_path)
 
@@ -109,7 +132,7 @@ def process_directories(root_dir_path):
                                     "key": generate_uuid(),
                                     "isRemoteUser": False,
                                     "remoteUserName": "local"
-                                }
+                                },
                             ],
                         },
                         "components": [

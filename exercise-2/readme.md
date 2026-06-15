@@ -1,4 +1,4 @@
-# Exercise: The Commit Mess
+# 2: The Commit Mess
 
 You've been in "the zone" for the last two hours. You fixed a nasty bug in the payment logic, refactored some messy logging code, and updated the project's documentation. 
 
@@ -12,4 +12,3 @@ Your task is to break these changes down into **three distinct, logical commits*
 2. **Commit 1 (The Bugfix):** Stage *only* the change in `payment.py` and commit it with the message `"fix: resolve payment processing timeout"`.
 3. **Commit 2 (The Refactor):** Stage *only* the change in `logger.py` and commit it with the message `"refactor: clean up verbose debug logs"`.
 4. **Commit 3 (The Docs):** Stage the remaining change in `README.md` and commit it with the message `"docs: update API endpoints documentation"`.
-5. Verify your work by running `git log --oneline` to ensure you have three clean commits on top of the initial commit.

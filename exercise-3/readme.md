@@ -1,4 +1,4 @@
-# Exercise 2: Interactive Staging
+# 3: Interactive Staging
 
 You're working on a feature in `auth.py`. While writing the core login logic, you also threw in a couple of `print()` statements to debug a variable, and you hastily drafted a half-finished token feature that isn't ready for production yet.
 

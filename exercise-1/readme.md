@@ -1,4 +1,4 @@
-# Exercise 1: Staging Area
+# 1: Staging Area
 
 Someone ran `git add .` way too early! Right now, your staging area contains 
 important fixes, temporary junk, and sensitive information that should *never* be committed to version control.
