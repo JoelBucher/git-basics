@@ -1,0 +1,55 @@
+{
+  "key": "bff397c3-bf18-49e0-a15b-f9a5090a9971",
+  "name": "10: The Leaked API Key",
+  "description": "",
+  "elements": [
+    {
+      "key": "68282ea6-8289-4862-ad42-04e1ce545138",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "ddce9b3c-6f22-489f-b045-f421ff87e980",
+        "markdown": "# 10: The Leaked API Key\n\nYour colleague Bob was debugging an integration late last night. In his haste, he hardcoded a live production Stripe API key into the source code and committed it directly to the branch. \n\nIf this branch gets pushed to GitHub, the key will be compromised instantly. Merely changing the code in a *new* commit isn't enough, because the key would still exist in the Git history. You need to use `git` to completely erase Bob's commit from the history, then safely store the API key where it belongs (in a `.env` file that is ignored by Git).\n\n## Objectives\n\n1. Find the leaked API key.\n2. Copy the leaked API key from the commit before destroying it.\n3. Use `git` to completely wipe Bob's commit from the history and your working directory (**Hint:** a `--hard` reset will destroy the commit and the file changes).\n4. Create a `.env` file and paste the API key inside it (`STRIPE_API_KEY=sk_prod_12345`).\n5. Ensure `.env` is added to a `.gitignore` file so it can never be tracked by accident.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "2c442b56-d718-4bfc-bea3-d429e71de76e"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIm5vZGVfbW9kdWxlcy8iID4gLmdpdGlnbm9yZQplY2hvICJwcmludCgnU3RhYmxlIEFwcGxpY2F0aW9uJykiID4gYXBwLnB5CmdpdCBhZGQgYXBwLnB5IC5naXRpZ25vcmUKZ2l0IGNvbW1pdCAtbSAiY2hvcmU6IGluaXRpYWwgcmVwb3NpdG9yeSBzZXR1cCIgLXEKCmVjaG8gInByaW50KCdSdW5uaW5nIGJpbGxpbmcgc2VydmljZS4uLicpIiA+IGFwcC5weQplY2hvICJTVFJJUEVfQVBJX0tFWT1cInNrX3Byb2RfMTIzNDVcIiIgPj4gYXBwLnB5CgpnaXQgYWRkIGFwcC5weQpnaXQgY29tbWl0IC1tICJmZWF0OiBhZGQgc3RyaXBlIGJpbGxpbmcgaW50ZWdyYXRpb24iIC1x",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "82ed45a5-a770-4a88-99b2-69d1de2cd6fb",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBsb2cgLXAgLTEKCmdpdCByZXNldCAtLWhhcmQgSEVBRH4xCgplY2hvICJTVFJJUEVfQVBJX0tFWT1za19wcm9kXzEyMzQ1IiA+IC5lbnYKCmVjaG8gIi5lbnYiID4+IC5naXRpZ25vcmUKCmdpdCBhZGQgLmdpdGlnbm9yZQpnaXQgY29tbWl0IC1tICJjaG9yZTogaWdub3JlIGVudiI=",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "35089b1d-d06b-4114-b9e4-5fe11e4c480f",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "a9a6b475-63f4-404e-a3c4-52a8c7b5a84c",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

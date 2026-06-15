@@ -1,28 +1,28 @@
 {
-  "key": "f5d33895-9caf-4094-a173-5d7b0feccb69",
+  "key": "8a98d08a-6cf4-4722-b8ce-f0eb347a84b6",
   "name": "7: The Main Worker",
   "description": "",
   "elements": [
     {
-      "key": "4b0d96f8-6298-403a-ba8a-4136cbefa403",
+      "key": "8de03a7b-efd5-4451-82d3-2ca6e2a561c2",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "d38eee9a-6bfa-42d2-acca-9e920f2c43c9",
+        "key": "b7dbe6d2-746c-49bf-a14c-ec865b14a083",
         "markdown": "# 7: The Main Worker\n\nYou just spent the last 20 minutes writing a brilliant new feature. You're about to commit it when a cold sweat breaks out: you realize you are still on the `main` branch! \n\nCompany policy strictly forbids committing directly to `main`. You need to get this feature onto a dedicated branch called `feature/login-system` without losing your progress or polluting the production history.\n\n## Objectives\n\n1. Run `git status` and `git branch` to confirm your current situation (you have uncommitted changes on `main`).\n2. Create and switch to a new branch named `feature/login-system`.\n3. Verify that your uncommitted changes safely traveled with you to the new branch.\n4. Stage and commit your changes on the new branch with the message `\"feat: add core login logic\"`.\n5. Switch back to the `main` branch and verify that it remains completely clean and untouched.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "e0591d09-7e85-4d8c-95d4-14c278b9926b"
+          "key": "7cb846b2-409c-40b9-a1a3-8c727142e217"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIiMgQ29ycG9yYXRlIFdlYnNpdGUiID4gUkVBRE1FLm1kCmdpdCBhZGQgUkVBRE1FLm1kCmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGNvbW1pdCIKCmVjaG8gImRlZiBsb2dpbigpOiBwcmludCgnV2VsY29tZSBhYm9hcmQhJykiID4gYXV0aC5weQoKZWNobyAiU2V0dXAgY29tcGxldGUhIFJ1biAnZ2l0IHN0YXR1cycgdG8gc2VlIHlvdXIgYWNjaWRlbnRhbCBjaGFuZ2VzIG9uIG1haW4uIg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "0108d002-022c-4ede-8dc9-40f57d37f8c6",
+            "key": "b2d10956-f786-4185-b45f-a8e5d51463e6",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,14 @@
             "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gQ2hlY2sgY3VycmVudCBzdGF0dXMgYW5kIGJyYW5jaApnaXQgc3RhdHVzCmdpdCBicmFuY2gKCiMgMi4gQ3JlYXRlIGFuZCBzd2l0Y2ggdG8gdGhlIG5ldyBmZWF0dXJlIGJyYW5jaCAKZ2l0IGNoZWNrb3V0IC1iIGZlYXR1cmUvbG9naW4tc3lzdGVtCgojIDMuIFN0YWdlIHRoZSBuZXcgZmlsZQpnaXQgYWRkIGF1dGgucHkKCiMgNC4gQ29tbWl0IHRoZSBjaGFuZ2VzIHRvIHRoZSBmZWF0dXJlIGJyYW5jaApnaXQgY29tbWl0IC1tICJmZWF0OiBhZGQgY29yZSBsb2dpbiBsb2dpYyIKCiMgNS4gU3dpdGNoIGJhY2sgdG8gbWFpbiB0byBlbnN1cmUgaXQgc3RheWVkIGNsZWFuCmdpdCBjaGVja291dCBtYWluCmdpdCBzdGF0dXM=",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "8c14801d-9d82-4f97-b616-6ed74714d3b5",
+            "key": "31b7af16-907b-4c42-a95d-22e77e6113b8",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "b0941952-518b-40ac-875c-1e686b318c1e",
+            "key": "88d9f67b-6397-4aff-90e4-6c02de6e46a8",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

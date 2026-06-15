@@ -1,28 +1,28 @@
 {
-  "key": "6d198d81-56c5-40a3-b9c5-81ee3d4cc2c5",
+  "key": "af60603b-a510-4518-ab73-8af71d672643",
   "name": "6: The Accidental Committer",
   "description": "",
   "elements": [
     {
-      "key": "99e18e51-bcfc-47fe-9693-949f14626ba9",
+      "key": "56af8e22-707c-41de-8c8d-7e564536c22d",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "ffa15cc4-0dca-46ec-8c25-91b53d310a9a",
+        "key": "ffa6a972-8673-44ad-bb5f-38ccfbbdcee7",
         "markdown": "# 6: The Accidental Committer\n\nA developer on your team forgot to create their feature branch and accidentally committed a massive new feature directly to `main`. \n\nWorse, right in the middle of their accidental streak, they discovered and fixed a critical documentation typo (`fix: typo in index.html`). Production needs that typo fix immediately, but we cannot deploy the incomplete feature.\n\nWhen you are finished:\n* `main` should only contain the stable history up to `v1.0.0` plus the single typo fix commit.\n* `feature-alpha` should safely hold the entire work history for the new feature.\n\n## Objectives\n- Keep the documentation typo fix on `main`\n- Isolate all four `feature-alpha` commits onto their own dedicated branch named `feature-alpha`. \n",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "3d22ec19-7f2c-4dcb-8a52-665c9b22d455"
+          "key": "2e1909f2-4942-4bb9-bd8f-63c164323b4c"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCiMgU2ltdWxhdGUgaW5pdGlhbCBwcm9kdWN0aW9uIHNldHVwCmVjaG8gIkluaXRpYWwgY29kZWJhc2UiID4gaW5kZXguaHRtbApnaXQgYWRkIGluZGV4Lmh0bWwKZ2l0IGNvbW1pdCAtbSAiSW5pdGlhbCBjb21taXQiCgojIENyZWF0ZSBhIHN0YWJsZSBoaXN0b3J5IG9uIG1haW4KZm9yIGkgaW4gezEuLjR9CmRvCiAgICBlY2hvICJTdGFibGUgdXBkYXRlICRpIiA+PiBpbmRleC5odG1sCiAgICBnaXQgY29tbWl0IC1hbSAiZG9jczogdXBkYXRlIGRvY3VtZW50YXRpb24gcGFydCAkaSIKZG9uZQoKIyBUYWcgdGhlIGxhc3Qgc3RhYmxlIHByb2R1Y3Rpb24gcmVsZWFzZQpnaXQgdGFnIHYxLjAuMAoKIyBBIGRldmVsb3BlciBmb3Jnb3QgdG8gc3dpdGNoIGJyYW5jaGVzIGFuZCBjb21taXR0ZWQgZGlyZWN0bHkgdG8gbWFpbgplY2hvICJGZWF0dXJlIGFscGhhIGNvcmUiID4gZmVhdHVyZV9hbHBoYS5weQpnaXQgYWRkIGZlYXR1cmVfYWxwaGEucHkKZ2l0IGNvbW1pdCAtbSAiZmVhdDogYmVnaW4gaW1wbGVtZW50YXRpb24gb2YgZmVhdHVyZSBhbHBoYSIKCmVjaG8gIkZlYXR1cmUgYWxwaGEgVUkiID4+IGZlYXR1cmVfYWxwaGEucHkKZ2l0IGNvbW1pdCAtYW0gImZlYXQ6IGFkZCBVSSBlbGVtZW50cyB0byBmZWF0dXJlIGFscGhhIgoKZWNobyAiQnVnZml4IGZvdW5kIGR1cmluZyBhbHBoYSB0ZXN0aW5nIiA+PiBpbmRleC5odG1sCmdpdCBjb21taXQgLWFtICJmaXg6IHR5cG8gaW4gaW5kZXguaHRtbCIKCmVjaG8gIkZlYXR1cmUgYWxwaGEgZG9jcyIgPj4gZmVhdHVyZV9hbHBoYS5weQpnaXQgY29tbWl0IC1hbSAiZG9jczogY29tcGxldGUgZmVhdHVyZSBhbHBoYSBkb2N1bWVudGF0aW9uIg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "ff4660a3-efd2-4210-964e-d663f6b4e1d8",
+            "key": "aae72277-c4a0-4a22-8b36-7a3e48ed8291",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,14 @@
             "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBicmFuY2ggZmVhdHVyZS1hbHBoYQoKZ2l0IHJlc2V0IC0taGFyZCB2MS4wLjAKClRZUE9fU0hBPSQoZ2l0IGxvZyBmZWF0dXJlLWFscGhhIC0tZ3JlcD0iZml4OiB0eXBvIGluIGluZGV4Lmh0bWwiIC0tZm9ybWF0PSIlSCIpCmdpdCBjaGVycnktcGljayAkVFlQT19TSEE=",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "95dd6780-8086-4528-8e4f-899cd0657be2",
+            "key": "1ff06333-4a73-4b1e-b340-f7e2c8c847d5",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "b98ec2e4-e59b-434c-87bb-d29a7378d15d",
+            "key": "7843b67f-9d60-4a5f-9ace-ef59da820caf",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

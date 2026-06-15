@@ -1,28 +1,28 @@
 {
-  "key": "b35b0bac-2afa-4c64-a209-f06ab04b8877",
+  "key": "9cc25aa0-ae93-4ba3-8db6-eebbca78c61d",
   "name": "9: A Tale of Two Merges",
   "description": "",
   "elements": [
     {
-      "key": "5d48d77a-c338-416d-8622-7dd57ee1475b",
+      "key": "a898c4fe-e0bc-4ac5-94c6-35bc08a1bc61",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "29601d2c-b580-4d2f-9295-395ec83d7a1e",
+        "key": "b656093a-9172-40cf-880a-c09ec995b52a",
         "markdown": "# 9: A Tale of Two Merges\n\nIn this repository, the history has split into two parallel tracks building off the initial commit:\n\n* **Track 1 (`feature-alpha`):** Built on top of the `alpha-base` branch.\n* **Track 2 (`feature-beta`):** Built on top of the `beta-base` branch.\n\nYour job is to bring both tracks up to date. You will merge the `alpha` feature using a default **Fast-Forward (FF)** strategy, and the `beta` feature using a forced **No-Fast-Forward (`--no-ff`)** strategy. \n\n## Objectives\n\n### Part 1: The Fast-Forward Track\n1. Switch to the `alpha-base` branch.\n2. Merge `feature-alpha` into it using the default behavior (**Fast-Forward**).\n3. Notice how the history is a perfectly straight, linear line.\n\n### Part 2: The No-Fast-Forward Track\n4. Switch to the `beta-base` branch.\n5. Merge `feature-beta` into it, but force a merge commit using the `--no-ff` flag. Use the commit message `\"merge: integrate feature-beta\"`.\n6. Notice how Git forced a \"bubble\" or split-and-join line to preserve the context of the branch.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "c8426418-ed42-4c01-bf75-c2ab881fee64"
+          "key": "f74e9cf0-360c-4e87-9113-14d7fab43f37"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIlByb2plY3QgUm9vdCIgPiBiYXNlLnR4dApnaXQgYWRkIGJhc2UudHh0CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0IgoKZ2l0IGNoZWNrb3V0IC1iIGFscGhhLWJhc2UgbWFpbgoKZWNobyAiQWxwaGEgQmFzZSBTZXR1cCIgPiBhbHBoYS50eHQKZ2l0IGFkZCBhbHBoYS50eHQKZ2l0IGNvbW1pdCAtbSAiZmVhdDogYWxwaGEgYmFzZSIKCmdpdCBjaGVja291dCAtYiBmZWF0dXJlLWFscGhhCgplY2hvICJBbHBoYSBGZWF0dXJlIFN0ZXAiID4+IGFscGhhLnR4dApnaXQgYWRkIGFscGhhLnR4dApnaXQgY29tbWl0IC1tICJmZWF0OiBBIgoKZ2l0IGNoZWNrb3V0IG1haW4KZ2l0IGNoZWNrb3V0IC1iIGJldGEtYmFzZSBtYWluCgplY2hvICJCZXRhIEJhc2UgU2V0dXAiID4gYmV0YS50eHQKZ2l0IGFkZCBiZXRhLnR4dApnaXQgY29tbWl0IC1tICJmZWF0OiBiZXRhIGJhc2UiCgpnaXQgY2hlY2tvdXQgLWIgZmVhdHVyZS1iZXRhCgplY2hvICJCZXRhIEZlYXR1cmUgU3RlcCIgPj4gYmV0YS50eHQKZ2l0IGFkZCBiZXRhLnR4dApnaXQgY29tbWl0IC1tICJmZWF0OiBCIgoKZ2l0IGNoZWNrb3V0IGFscGhhLWJhc2U=",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "01bfa170-7727-4e1b-9808-e40b08ff5a71",
+            "key": "73925343-aa20-485a-a313-1a8361a4ad80",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,14 @@
             "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBjaGVja291dCBhbHBoYS1iYXNlCmdpdCBtZXJnZSBmZWF0dXJlLWFscGhhCgpnaXQgY2hlY2tvdXQgYmV0YS1iYXNlCmdpdCBtZXJnZSBmZWF0dXJlLWJldGEgLS1uby1mZiAtbSAibWVyZ2U6IGludGVncmF0ZSBmZWF0dXJlLWJldGEi",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "6c5b1da4-ed6d-4a1e-aa2b-df8db1e7c91a",
+            "key": "822aca40-f488-4e40-8cdb-642b6ede558b",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "113f74e9-8c45-4b87-9c2a-ae0e20a5f5ff",
+            "key": "dfbcef67-fec6-4891-aa81-09190c2f1aab",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }
