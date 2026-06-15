@@ -1,0 +1,55 @@
+{
+  "key": "ffe86ee9-f98b-4720-a8a9-599b0d33bbc1",
+  "name": "8: Feature Integration",
+  "description": "",
+  "elements": [
+    {
+      "key": "a4c8bd39-b5d8-4f44-a08d-8cf0b5c19f8e",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "303e0bf4-9b71-4c45-b30c-e5a9ef307265",
+        "markdown": "# 8: Feature Integration\n\nThe release window is opening soon, and your team has three finished features sitting on separate branches: `feature/login-ui`, `feature/api-endpoints`, and `docs/api-guide`. \n\nYour team lead wants all of these integrated into the `main` branch. Thankfully, the developers communicated well, and there shouldn't be any merge conflicts. Your goal is to cleanly merge all three branches into `main` so the QA team can test the complete build.\n\n## Objectives\n\n1. Checkout to the `main` branch.\n2. Merge the `feature/login-ui` branch into `main`.\n3. Merge the `feature/api-endpoints` branch into `main`.\n4. Merge the `docs/api-guide` branch into `main`.\n\n> **Note:** If you are having trouble with VIM. Use `:wq` to write & quit the editor or use the `--no-edit` merge flag to circumvent commit message editing.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "029f31e8-938c-404f-ad97-7f0098d2ed38"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgSW5pdGlhbGl6ZSByZXBvc2l0b3J5CmdpdCBpbml0IC1iIG1haW4KCiMgSW5pdGlhbCBjb21taXQgb24gbWFpbgplY2hvICIjIENvcmUgQXBwbGljYXRpb24iID4gUkVBRE1FLm1kCmdpdCBhZGQgUkVBRE1FLm1kCmdpdCBjb21taXQgLW0gImluaXRpYWw6IHNldHVwIGNvcmUgYXBwbGljYXRpb24gc3RydWN0dXJlIgoKIyBDcmVhdGUgYSBjb21wbGV4IGhpc3RvcnkgYnkgYnJhbmNoaW5nIGFuZCBjb21taXR0aW5nIGNvbmN1cnJlbnRseQoKIyAxLiBTdGFydCBVSSBGZWF0dXJlCmdpdCBjaGVja291dCAtYiBmZWF0dXJlL2xvZ2luLXVpCmVjaG8gImRpdi5sb2dpbi1ib3ggeyBjb2xvcjogYmx1ZTsgfSIgPiB1aS1zdHlsZXMuY3NzCmdpdCBhZGQgdWktc3R5bGVzLmNzcwpnaXQgY29tbWl0IC1tICJmZWF0KHVpKTogYWRkIGJhc2ljIGxvZ2luIGJveCBzdHlsaW5nIgoKIyAyLiBHbyBiYWNrIHRvIG1haW4gYW5kIHN0YXJ0IEFQSSBGZWF0dXJlCmdpdCBjaGVja291dCBtYWluCmdpdCBjaGVja291dCAtYiBmZWF0dXJlL2FwaS1lbmRwb2ludHMKZWNobyAiZGVmIGdldF91c2VyKCk6IHJldHVybiB7J2lkJzogMX0iID4gYXBpLnB5CmdpdCBhZGQgYXBpLnB5CmdpdCBjb21taXQgLW0gImZlYXQoYXBpKTogaW1wbGVtZW50IHVzZXIgZmV0Y2ggZW5kcG9pbnQiCgojIDMuIEFkZCBtb3JlIHRvIFVJIEZlYXR1cmUKZ2l0IGNoZWNrb3V0IGZlYXR1cmUvbG9naW4tdWkKZWNobyAiYnV0dG9uLnN1Ym1pdCB7IGJhY2tncm91bmQ6IGdyZWVuOyB9IiA+PiB1aS1zdHlsZXMuY3NzCmdpdCBhZGQgdWktc3R5bGVzLmNzcwpnaXQgY29tbWl0IC1tICJmZWF0KHVpKTogYWRkIHN1Ym1pdCBidXR0b24gc3R5bGluZyIKCiMgNC4gU3RhcnQgRG9jcyBGZWF0dXJlIGZyb20gdGhlIEFQSSBicmFuY2gKZ2l0IGNoZWNrb3V0IGZlYXR1cmUvYXBpLWVuZHBvaW50cwpnaXQgY2hlY2tvdXQgLWIgZG9jcy9hcGktZ3VpZGUKZWNobyAiIyBBUEkgRG9jdW1lbnRhdGlvbiIgPiBBUEkubWQKZ2l0IGFkZCBBUEkubWQKZ2l0IGNvbW1pdCAtbSAiZG9jczogaW5pdGlhbGl6ZSBBUEkgZ3VpZGUiCgojIDUuIEFkZCBtb3JlIHRvIEFQSSBGZWF0dXJlCmdpdCBjaGVja291dCBmZWF0dXJlL2FwaS1lbmRwb2ludHMKZWNobyAiZGVmIGdldF9zdGF0dXMoKTogcmV0dXJuICdPSyciID4+IGFwaS5weQpnaXQgYWRkIGFwaS5weQpnaXQgY29tbWl0IC1tICJmZWF0KGFwaSk6IGFkZCBoZWFsdGggY2hlY2sgZW5kcG9pbnQiCgojIDYuIEFkZCBmaW5hbCB0b3VjaCB0byBEb2NzCmdpdCBjaGVja291dCBkb2NzL2FwaS1ndWlkZQplY2hvICIjIyBFbmRwb2ludHM6IC91c2VyLCAvc3RhdHVzIiA+PiBBUEkubWQKZ2l0IGFkZCBBUEkubWQKZ2l0IGNvbW1pdCAtbSAiZG9jczogZG9jdW1lbnQgdXNlciBhbmQgc3RhdHVzIGVuZHBvaW50cyIKCiMgUmV0dXJuIHRvIG1haW4gc28gdGhlIHVzZXIgc3RhcnRzIGluIHRoZSByaWdodCBwbGFjZQpnaXQgY2hlY2tvdXQgbWFpbg==",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "92174d40-fee1-4db7-acaa-ecbf4fcfe4d5",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgRW5zdXJlIHdlIGFyZSBvbiB0aGUgbWFpbiBicmFuY2gKZ2l0IGNoZWNrb3V0IG1haW4KCiMgTWVyZ2UgdGhlIGxvZ2luIFVJIGZlYXR1cmUKIyAoVXNpbmcgLS1uby1lZGl0IHRvIHNraXAgdGhlIGludGVyYWN0aXZlIHRleHQgZWRpdG9yIGZvciB0aGUgbWVyZ2UgY29tbWl0IG1lc3NhZ2UpCmdpdCBtZXJnZSBmZWF0dXJlL2xvZ2luLXVpIC0tbm8tZWRpdAoKIyBNZXJnZSB0aGUgQVBJIGVuZHBvaW50cyBmZWF0dXJlCmdpdCBtZXJnZSBmZWF0dXJlL2FwaS1lbmRwb2ludHMgLS1uby1lZGl0CgojIE1lcmdlIHRoZSBkb2N1bWVudGF0aW9uIGZlYXR1cmUKZ2l0IG1lcmdlIGRvY3MvYXBpLWd1aWRlIC0tbm8tZWRpdAoKIyBWaWV3IHRoZSBmaW5hbCBpbnRlZ3JhdGVkIGhpc3RvcnkgZ3JhcGgKZ2l0IGxvZyAtLW9uZWxpbmUgLS1ncmFwaCAtLWFsbA==",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "c3fc489e-fc09-4343-855a-18fab268bc54",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "78f5ace4-5786-4fe7-9b81-a1b7da3ade3d",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

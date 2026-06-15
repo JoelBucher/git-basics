@@ -1,28 +1,28 @@
 {
-  "key": "75a0a80e-d053-4c57-ae2e-ad0b4ac15535",
+  "key": "22757843-7c10-4554-b5e1-eeb13f2b56c7",
   "name": "3: Interactive Staging",
   "description": "",
   "elements": [
     {
-      "key": "f56c3080-a389-4193-bff3-16c2a8e5674f",
+      "key": "8b0c8027-3e4b-43cc-bf3d-1210b4c65590",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "b52dc6d3-0dc5-4041-9da0-984ae795cbc7",
+        "key": "919ca9b5-4c83-4da1-8fa8-a89b2b2e24fd",
         "markdown": "# 3: Interactive Staging\n\nYou're working on a feature in `auth.py`. While writing the core login logic, you also threw in a couple of `print()` statements to debug a variable, and you hastily drafted a half-finished token feature that isn't ready for production yet.\n\nYour team lead wants the core login fix committed *right now* for a hotfix deploy. They explicitly told you: \"Do not include your local debug logs or that unfinished token code in the release.\"\n\nBecause all of these changes are trapped inside the exact same file (`auth.py`), a standard `git add auth.py` won't work. You need to perform surgery on the file using Git's interactive patching tool.\n\n## Objectives\n\n1. Run `git diff` to review all the modifications inside `auth.py`.\n2. **Stage** the hunk containing the core login bugfix.\n3. **Skip (do not stage)** the hunk containing the `print(\"DEBUG:\")` statement.\n4. **Skip (do not stage)** the hunk containing the unfinished `generate_token` function.\n5. Verify with `git status` and `git diff --staged` that only the login fix is ready to go.\n6. Commit the partial changes with the message `\"fix: correct user authentication logic\"`.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "ba896a63-99b7-4b4d-bf45-0539ff197cbf"
+          "key": "6dc70bfd-ca25-4e6d-946c-7b6d3ac632a2"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmNhdCA8PCAnRU9GJyA+IGF1dGgucHkKZGVmIGxvZ2luX3VzZXIodXNlcm5hbWUsIHBhc3N3b3JkKToKICAgICMgQmFzZSBhdXRoZW50aWNhdGlvbiBsb2dpYwogICAgaWYgdXNlcm5hbWUgPT0gImFkbWluIiBhbmQgcGFzc3dvcmQgPT0gInBhc3N3b3JkIjoKICAgICAgICByZXR1cm4gVHJ1ZQogICAgcmV0dXJuIEZhbHNlCkVPRgoKZ2l0IGFkZCBhdXRoLnB5CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGF1dGggc2V0dXAiCgpjYXQgPDwgJ0VPRicgPiBhdXRoLnB5CmRlZiBsb2dpbl91c2VyKHVzZXJuYW1lLCBwYXNzd29yZCk6CiAgICAjIEZJWDogU3RyaXBwaW5nIHdoaXRlc3BhY2UgdG8gcHJldmVudCBsb2dpbiBmYWlsdXJlcyBmcm9tIGFjY2lkZW50YWwgdHJhaWxpbmcgc3BhY2VzCiAgICB1c2VybmFtZSA9IHVzZXJuYW1lLnN0cmlwKCkKICAgIHBhc3N3b3JkID0gcGFzc3dvcmQuc3RyaXAoKQogICAgCiAgICBpZiB1c2VybmFtZSA9PSAiYWRtaW4iIGFuZCBwYXNzd29yZCA9PSAicGFzc3dvcmQiOgogICAgICAgIHByaW50KGYiREVCVUc6IFVzZXIge3VzZXJuYW1lfSBhdHRlbXB0ZWQgbG9naW4gd2l0aCBwYXNzd29yZCB7cGFzc3dvcmR9IikgIyBUT0RPOiBSRU1PVkUgQkVGT1JFIENPTU1JVAogICAgICAgIHJldHVybiBUcnVlCiAgICByZXR1cm4gRmFsc2UKCmRlZiBnZW5lcmF0ZV90b2tlbigpOgogICAgIyBVTkZJTklTSEVEIEZFQVRVUkU6IERvIG5vdCBjb21taXQgdGhpcyB5ZXQhCiAgICBwYXNzCkVPRg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "b5f7c08b-b349-4697-b5fc-0c09a4fe941b",
+            "key": "8ec3dcbd-7898-4a37-b01d-5a7357e579eb",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,14 @@
             "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBkaWZmCgpnaXQgYWRkIC1wIGF1dGgucHkKCiMgVXNlICJzIiB0byBzcGxpdCB0aGUgaW5pdGlhbCBodW5rCiMgVXNlICJ5IiB0byBjb21taXQgdGhlIGZpcnN0IGh1bmsKIyBVc2UgIm4iIHR3aWNlIHRvIGlnbm9yZSB0aGUgbGFzdCB0d28gaHVua3MKCmdpdCBkaWZmIC0tc3RhZ2VkCgpnaXQgY29tbWl0IC1tICJmaXg6IGNvcnJlY3QgdXNlciBhdXRoZW50aWNhdGlvbiBsb2dpYyIKCmdpdCBkaWZm",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "968595cc-26b8-4420-9507-682fff24ba1d",
+            "key": "7f364f7e-551e-4c9f-b1d9-bd0f04888647",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "52a0c74b-7e63-4a5a-a955-f3fb7c378a52",
+            "key": "58588612-b169-429d-88c4-82447d612bb5",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }
