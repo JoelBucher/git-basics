@@ -1,0 +1,55 @@
+{
+  "key": "95a1445f-781e-4587-8ba6-a4d319eaf05e",
+  "name": "Exercise 2: Interactive Staging",
+  "description": "",
+  "elements": [
+    {
+      "key": "ace504d3-eebb-4f3f-96d6-41724b59a53e",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "e50d2993-1070-4418-b5e8-754b6c3d592d",
+        "markdown": "# Exercise 2: Interactive Staging\n\nYou're working on a feature in `auth.py`. While writing the core login logic, you also threw in a couple of `print()` statements to debug a variable, and you hastily drafted a half-finished token feature that isn't ready for production yet.\n\nYour team lead wants the core login fix committed *right now* for a hotfix deploy. They explicitly told you: \"Do not include your local debug logs or that unfinished token code in the release.\"\n\nBecause all of these changes are trapped inside the exact same file (`auth.py`), a standard `git add auth.py` won't work. You need to perform surgery on the file using Git's interactive patching tool.\n\n## Objectives\n\n1. Run `git diff` to review all the modifications inside `auth.py`.\n2. **Stage** the hunk containing the core login bugfix.\n3. **Skip (do not stage)** the hunk containing the `print(\"DEBUG:\")` statement.\n4. **Skip (do not stage)** the hunk containing the unfinished `generate_token` function.\n5. Verify with `git status` and `git diff --staged` that only the login fix is ready to go.\n6. Commit the partial changes with the message `\"fix: correct user authentication logic\"`.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "ad69496e-242d-48ac-b231-b0c8d2dc64ff"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmNhdCA8PCAnRU9GJyA+IGF1dGgucHkKZGVmIGxvZ2luX3VzZXIodXNlcm5hbWUsIHBhc3N3b3JkKToKICAgICMgQmFzZSBhdXRoZW50aWNhdGlvbiBsb2dpYwogICAgaWYgdXNlcm5hbWUgPT0gImFkbWluIiBhbmQgcGFzc3dvcmQgPT0gInBhc3N3b3JkIjoKICAgICAgICByZXR1cm4gVHJ1ZQogICAgcmV0dXJuIEZhbHNlCkVPRgoKZ2l0IGFkZCBhdXRoLnB5CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGF1dGggc2V0dXAiCgpjYXQgPDwgJ0VPRicgPiBhdXRoLnB5CmRlZiBsb2dpbl91c2VyKHVzZXJuYW1lLCBwYXNzd29yZCk6CiAgICAjIEZJWDogU3RyaXBwaW5nIHdoaXRlc3BhY2UgdG8gcHJldmVudCBsb2dpbiBmYWlsdXJlcyBmcm9tIGFjY2lkZW50YWwgdHJhaWxpbmcgc3BhY2VzCiAgICB1c2VybmFtZSA9IHVzZXJuYW1lLnN0cmlwKCkKICAgIHBhc3N3b3JkID0gcGFzc3dvcmQuc3RyaXAoKQogICAgCiAgICBpZiB1c2VybmFtZSA9PSAiYWRtaW4iIGFuZCBwYXNzd29yZCA9PSAicGFzc3dvcmQiOgogICAgICAgIHByaW50KGYiREVCVUc6IFVzZXIge3VzZXJuYW1lfSBhdHRlbXB0ZWQgbG9naW4gd2l0aCBwYXNzd29yZCB7cGFzc3dvcmR9IikgIyBUT0RPOiBSRU1PVkUgQkVGT1JFIENPTU1JVAogICAgICAgIHJldHVybiBUcnVlCiAgICByZXR1cm4gRmFsc2UKCmRlZiBnZW5lcmF0ZV90b2tlbigpOgogICAgIyBVTkZJTklTSEVEIEZFQVRVUkU6IERvIG5vdCBjb21taXQgdGhpcyB5ZXQhCiAgICBwYXNzCkVPRg==",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "4e459d75-8069-45a5-a68d-7add1d5aca68",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBkaWZmCgpnaXQgYWRkIC1wIGF1dGgucHkKCiMgVXNlICJzIiB0byBzcGxpdCB0aGUgaW5pdGlhbCBodW5rCiMgVXNlICJ5IiB0byBjb21taXQgdGhlIGZpcnN0IGh1bmsKIyBVc2UgIm4iIHR3aWNlIHRvIGlnbm9yZSB0aGUgbGFzdCB0d28gaHVua3MKCmdpdCBkaWZmIC0tc3RhZ2VkCgpnaXQgY29tbWl0IC1tICJmaXg6IGNvcnJlY3QgdXNlciBhdXRoZW50aWNhdGlvbiBsb2dpYyIKCmdpdCBkaWZm",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "5d0a0d4c-6d99-4879-abe9-77fcd81f7799",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "c9e8be7a-d74e-47a9-b64a-6aaaa6ecb399",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

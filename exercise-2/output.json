@@ -1,0 +1,55 @@
+{
+  "key": "520cc235-2295-40c3-9967-5bcefe919884",
+  "name": "Exercise: The Commit Mess",
+  "description": "",
+  "elements": [
+    {
+      "key": "63e0deac-5146-4c7d-ab5d-3ef30626d446",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "2b047092-7d43-4813-b2da-0134c6aa832b",
+        "markdown": "# Exercise: The Commit Mess\n\nYou've been in \"the zone\" for the last two hours. You fixed a nasty bug in the payment logic, refactored some messy logging code, and updated the project's documentation. \n\nBut there's a problem: you haven't committed anything yet! If you run `git commit -a` right now, all of these unrelated changes will be lumped into a single, chaotic commit. Your team lead will not be happy during code review.\n\nYour task is to break these changes down into **three distinct, logical commits** using Git's staging area.\n\n## Objectives\n\n1. Review the current changes using `git status` and `git diff`.\n2. **Commit 1 (The Bugfix):** Stage *only* the change in `payment.py` and commit it with the message `\"fix: resolve payment processing timeout\"`.\n3. **Commit 2 (The Refactor):** Stage *only* the change in `logger.py` and commit it with the message `\"refactor: clean up verbose debug logs\"`.\n4. **Commit 3 (The Docs):** Stage the remaining change in `README.md` and commit it with the message `\"docs: update API endpoints documentation\"`.\n5. Verify your work by running `git log --oneline` to ensure you have three clean commits on top of the initial commit.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "34ab4a58-4b0a-48d1-b021-0b1159606036"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgSW5pdGlhbGl6ZSBhIG5ldyByZXBvc2l0b3J5IGFuZCBjcmVhdGUgaW5pdGlhbCBzdGF0ZQpnaXQgaW5pdAplY2hvICJkZWYgcHJvY2Vzc19wYXltZW50KCk6IHBhc3MiID4gcGF5bWVudC5weQplY2hvICJkZWYgbG9nKG1zZyk6IHByaW50KG1zZykiID4gbG9nZ2VyLnB5CmVjaG8gIiMgUHJvamVjdCBBUEkiID4gUkVBRE1FLm1kCgpnaXQgYWRkIC4KZ2l0IGNvbW1pdCAtbSAiY2hvcmU6IGluaXRpYWwgcmVwb3NpdG9yeSBzZXR1cCIKCiMgU2ltdWxhdGUgdGhlICJtZWdhLWNoYW5nZSIgd29yayBzZXNzaW9uCmVjaG8gLWUgImRlZiBwcm9jZXNzX3BheW1lbnQoKTpcbiAgICAjIEZJWEVEOiBBZGRlZCB0aW1lb3V0IGhhbmRsaW5nXG4gICAgc2V0X3RpbWVvdXQoNSlcbiAgICBwYXNzIiA+IHBheW1lbnQucHkKZWNobyAtZSAiZGVmIGxvZyhtc2cpOlxuICAgICMgUkVGQUNUT1I6IFN0cmVhbWxpbmVkIGxvZ2dpbmdcbiAgICBpZiBjb25maWcuREVCVUc6IHByaW50KGYnW0xPR10ge21zZ30nKSIgPiBsb2dnZXIucHkKZWNobyAtZSAiIyBQcm9qZWN0IEFQSVxuXG4jIyBFbmRwb2ludHNcbi0gUE9TVCAvYXBpL3YxL2NoYXJnZSIgPiBSRUFETUUubWQ=",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "2cf2cdd2-0e61-43ec-bb83-e73a8674962d",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgQ2hlY2sgdGhlIGRhbWFnZQpnaXQgc3RhdHVzCgojIDEuIFN0YWdlIGFuZCBjb21taXQgdGhlIHBheW1lbnQgZml4CmdpdCBhZGQgcGF5bWVudC5weQpnaXQgY29tbWl0IC1tICJmaXg6IHJlc29sdmUgcGF5bWVudCBwcm9jZXNzaW5nIHRpbWVvdXQiCgojIDIuIFN0YWdlIGFuZCBjb21taXQgdGhlIGxvZ2dlciByZWZhY3RvcgpnaXQgYWRkIGxvZ2dlci5weQpnaXQgY29tbWl0IC1tICJyZWZhY3RvcjogY2xlYW4gdXAgdmVyYm9zZSBkZWJ1ZyBsb2dzIgoKIyAzLiBTdGFnZSBhbmQgY29tbWl0IHRoZSBkb2N1bWVudGF0aW9uIHVwZGF0ZXMKZ2l0IGFkZCBSRUFETUUubWQKZ2l0IGNvbW1pdCAtbSAiZG9jczogdXBkYXRlIEFQSSBlbmRwb2ludHMgZG9jdW1lbnRhdGlvbiIKCiMgNC4gVmVyaWZ5IHRoZSBjbGVhbiBoaXN0b3J5CmdpdCBsb2cgLS1vbmVsaW5l",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "06662cd5-2119-4d95-ac87-a0f626622038",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "2cee3d5f-05b2-434d-9964-8340ee5b0ddb",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

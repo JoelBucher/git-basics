@@ -1,0 +1,55 @@
+{
+  "key": "79702cc1-27da-4c73-8344-e5a5dc2aab34",
+  "name": "Exercise 1: Staging Area",
+  "description": "",
+  "elements": [
+    {
+      "key": "21dbc97f-d9d8-47f0-8786-366db87014b3",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "75fdbbf9-35f6-4063-aa1d-f0e4c9af62b0",
+        "markdown": "# Exercise 1: Staging Area\n\nSomeone ran `git add .` way too early! Right now, your staging area contains \nimportant fixes, temporary junk, and sensitive information that should *never* be committed to version control.\n\nYour task is to audit the staging area and fix it.\n\n## Objectives\n\n1. Run `git status` to see what is currently staged.\n2. Unstage `credentials.env` and `app.py.swp` so they are **not** part of the next commit.\n3. Ensure these files remain in your local directory (do not delete them from your computer, just untrack them from Git's staging area).\n4. Verify that only `app.py` and `notes.txt` are staged.\n5. Commit the changes with the message `\"fix: apply security patch and notes\"`.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "26a2ea28-7c5f-4890-8393-d5f45a0a4f4b"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIlN0YWJsZSBwcm9kdWN0aW9uIGNvZGUiID4gYXBwLnB5CmdpdCBhZGQgYXBwLnB5CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGNvbW1pdCIKCmVjaG8gImRlZiBzZWN1cmVfZml4KCk6IHBhc3MiID4+IGFwcC5weQplY2hvICJGaXggZGV0YWlscyBmb3IgcmVsZWFzZSBub3RlcyIgPiBub3Rlcy50eHQKZWNobyAiZGJfcGFzc3dvcmQ9U3VwZXJTZWNyZXQxMjMiID4gY3JlZGVudGlhbHMuZW52CmVjaG8gInRlbXAgZGF0YSIgPiBhcHAucHkuc3dwCgpnaXQgYWRkIC4=",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "306fcfaa-b8a3-484e-804f-81665ae30512",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBzdGF0dXMKZ2l0IHJlc3RvcmUgLS1zdGFnZWQgY3JlZGVudGlhbHMuZW52CmdpdCByZXN0b3JlIC0tc3RhZ2VkIGFwcC5weS5zd3AKZ2l0IHN0YXR1cwpnaXQgY29tbWl0IC1tICJmaXg6IGFwcGx5IHNlY3VyaXR5IHBhdGNoIGFuZCBub3RlcyI=",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "36296441-6b7a-456d-9f28-adf3d0023018",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "d8741b5d-94e8-4050-ac2b-65eba5e56f81",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}
