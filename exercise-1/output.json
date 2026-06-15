@@ -1,43 +1,43 @@
 {
-  "key": "de4243df-fbf9-4839-83bf-4a6ff5ef55e9",
+  "key": "7318e4b8-13fb-4c30-92e2-5dbdcfe2f272",
   "name": "1: Staging Area",
   "description": "",
   "elements": [
     {
-      "key": "08d26139-4b58-4527-ae75-763ef4710288",
+      "key": "65e8eacd-df2f-4099-aaa3-4d5fa9d21595",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "0ee731c4-c1d0-4070-b492-b0155749b345",
+        "key": "4c8b2ea6-5f10-4ab6-aa51-9480a3dae0f5",
         "markdown": "# 1: Staging Area\n\nSomeone ran `git add .` way too early! Right now, your staging area contains \nimportant fixes, temporary junk, and sensitive information that should *never* be committed to version control.\n\nYour task is to audit the staging area and fix it.\n\n## Objectives\n\n1. Run `git status` to see what is currently staged.\n2. Unstage `credentials.env` and `app.py.swp` so they are **not** part of the next commit.\n3. Ensure these files remain in your local directory (do not delete them from your computer, just untrack them from Git's staging area).\n4. Verify that only `app.py` and `notes.txt` are staged.\n5. Commit the changes with the message `\"fix: apply security patch and notes\"`.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "18646be1-ff31-4636-9643-01dec10db1ab"
+          "key": "c4fb2886-6c80-497e-8a74-985ef31d16bd"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIlN0YWJsZSBwcm9kdWN0aW9uIGNvZGUiID4gYXBwLnB5CmdpdCBhZGQgYXBwLnB5CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGNvbW1pdCIKCmVjaG8gImRlZiBzZWN1cmVfZml4KCk6IHBhc3MiID4+IGFwcC5weQplY2hvICJGaXggZGV0YWlscyBmb3IgcmVsZWFzZSBub3RlcyIgPiBub3Rlcy50eHQKZWNobyAiZGJfcGFzc3dvcmQ9U3VwZXJTZWNyZXQxMjMiID4gY3JlZGVudGlhbHMuZW52CmVjaG8gInRlbXAgZGF0YSIgPiBhcHAucHkuc3dwCgpnaXQgYWRkIC4=",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "761709f9-1dac-4d80-a892-df79cc5d99e9",
+            "key": "49d0529c-0a13-4dc0-9b83-402df2663d6f",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
-            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBzdGF0dXMKZ2l0IHJlc3RvcmUgLS1zdGFnZWQgY3JlZGVudGlhbHMuZW52CmdpdCByZXN0b3JlIC0tc3RhZ2VkIGFwcC5weS5zd3AKZ2l0IHN0YXR1cwpnaXQgY29tbWl0IC1tICJmaXg6IGFwcGx5IHNlY3VyaXR5IHBhdGNoIGFuZCBub3RlcyI=",
+            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBzdGF0dXMKZ2l0IHJtIC0tY2FjaGVkIGNyZWRlbnRpYWxzLmVudgpnaXQgcm0gLS1jYWNoZWQgYXBwLnB5LnN3cApnaXQgc3RhdHVzCmdpdCBjb21taXQgLW0gImZpeDogYXBwbHkgc2VjdXJpdHkgcGF0Y2ggYW5kIG5vdGVzIg==",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "00094410-89fd-4ddf-8b60-46a6ac07268c",
+            "key": "7a2c722d-0529-4cbb-a76c-d549a097e096",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "7fa8635b-6beb-42af-96b5-1621a531022d",
+            "key": "3dec670c-c30a-4077-97bf-5e3c083f4fd6",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

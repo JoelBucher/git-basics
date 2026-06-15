@@ -1,0 +1,55 @@
+{
+  "key": "1c63a001-8200-4549-aab2-b0107ecc88cd",
+  "name": "4: The Silent Clutter",
+  "description": "",
+  "elements": [
+    {
+      "key": "3a02db09-54b6-469e-9878-eb41b7611033",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "310fad7d-22e3-45c7-984f-5d51de5d2b51",
+        "markdown": "# 4: The Silent Clutter\n\nYou just pulled the latest changes from your team, and you are ready to start coding. However, your teammate works on a macOS machine and accidentally left a trail of `.DS_Store` files in the repository. To make matters worse, your own local text editor just generated some temporary log files (`debug.log`) that you don't want to track either.\n\nIf you run `git status`, you'll see a mix of system clutter, logs, and actual project work. Your goal is to clean up the repository, untrack the system files without deleting them from your machine, and configure Git so this never happens again.\n\n## Objectives\n\n1. Identify which files are currently being tracked by Git vs. which ones are untracked.\n2. Remove the existing `.DS_Store` file from Git's tracking *without* deleting it from your actual file system.\n3. Create a `.gitignore` file at the root of the repository.\n4. Configure the `.gitignore` to permanently ignore:\n   * All `.DS_Store` files anywhere in the project.\n   * All files ending in `.log`.\n5. Verify that your `git status` looks clean (only showing your intended changes and the new `.gitignore`).\n6. Stage and commit your `.gitignore` and the removal of the clutter with the message `\"chore: added gitignore\"`.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "cf444c7c-52f6-4e3c-b716-8bbcb020dd0e"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCm1rZGlyIC1wIHNyYy91dGlscwplY2hvICJjb25zb2xlLmxvZygnSGVsbG8gV29ybGQnKTsiID4gc3JjL2luZGV4LmpzCmVjaG8gImZ1bmN0aW9uIGhlbHBlcigpIHt9IiA+IHNyYy91dGlscy9oZWxwZXIuanMKCmVjaG8gIm1hY09TIG1ldGFkYXRhIiA+IC5EU19TdG9yZQpnaXQgYWRkIHNyYy9pbmRleC5qcyBzcmMvdXRpbHMvaGVscGVyLmpzIC5EU19TdG9yZQpnaXQgY29tbWl0IC1tICJJbml0aWFsIGNvbW1pdCB3aXRoIHByb2plY3Qgc3RydWN0dXJlIgoKZWNobyAic29tZSBsb2NhbCBkZWJ1ZyBpbmZvIiA+IGRlYnVnLmxvZwplY2hvICJtb3JlIG1hY09TIG1ldGFkYXRhIiA+IHNyYy91dGlscy8uRFNfU3RvcmU=",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "9852aa1c-7513-4a00-9f1b-6f43a7074772",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gVW50cmFjayB0aGUgLkRTX1N0b3JlIGZpbGUgdGhhdCB3YXMgYWxyZWFkeSBjb21taXR0ZWQgCiMgKHVzaW5nIC0tY2FjaGVkIGtlZXBzIHRoZSBmaWxlIG9uIHlvdXIgaGFyZCBkcml2ZSkKZ2l0IHJtIC0tY2FjaGVkIC5EU19TdG9yZQoKZWNobyAiLkRTX1N0b3JlIiA+IC5naXRpZ25vcmUKZWNobyAiKiovLkRTX1N0b3JlIiA+PiAuZ2l0aWdub3JlCmVjaG8gIioubG9nIiA+PiAuZ2l0aWdub3JlCgpnaXQgc3RhdHVzCgpnaXQgYWRkIC5naXRpZ25vcmUgLkRTX1N0b3JlCgpnaXQgY29tbWl0IC1tICJjaG9yZTogYWRkIGdpdGlnbm9yZSBhbmQgdW50cmFjayBzeXN0ZW0gY2x1dHRlciI=",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "6f35a531-a513-48ae-94f1-7cde22b232eb",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "f7d40971-6a0a-409a-82a6-82aa4736ad2d",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}
