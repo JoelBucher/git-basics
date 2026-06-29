@@ -1,0 +1,69 @@
+{
+  "key": "0543463e-a8aa-4852-878f-b79d7689ffb6",
+  "name": "12: Ctrl + Z",
+  "description": "",
+  "elements": [
+    {
+      "key": "66940d3f-4541-4b6d-a298-0296209aea33",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "9ec1257d-16e7-48b9-9f21-3e51724728f8",
+        "markdown": "# 12: Ctrl + Z\n\nOh no! Two different feature branches were pushed, and both contain a typo in their latest commit. \n\nBecause of how these branches are intended to be used, you need to use two completely different strategies to fix them:\n1. **`feature-public`**: This branch has already been pushed to the remote repository and shared with the team. You need to undo the typo **without rewriting history**.\n2. **`feature-private`**: This is a local-only experimental branch. You want to completely wipe out the bad commit as if it **never happened**.\n\n## Objectives\n\n### Part 1: The Public Branch\n1. Switch to the `feature-public` branch.\n2. Undo the effect of the latest commit using `git revert` so that the history remains linear and safe for others.\n3. Accept the default commit message or customize it.\n\n### Part 2: The Private Branch\n1. Switch to the `feature-private` branch.\n2. Erase the latest bad commit entirely using `git reset --hard` to move the branch pointer back to the initial commit.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "a719cff8-755d-47ed-beba-9f0035c040f2"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIlRoaXMgaXMgdGhlIGNvcmUgc3RhYmxlIGNvZGViYXNlLiIgPiBtYWluLnB5CmdpdCBhZGQgbWFpbi5weQpnaXQgY29tbWl0IC1tICJpbml0aWFsOiBzZXR1cCBzdGFibGUgY29yZSIKCmdpdCBjaGVja291dCAtYiBmZWF0dXJlLXB1YmxpYwplY2hvICJBZGRpbmcgYSBncmVhdCBwdWJsaWMgZmVhdHJ1ZSEiID4+IG1haW4ucHkKZ2l0IGFkZCBtYWluLnB5CmdpdCBjb21taXQgLW0gImZlYXQ6IGFkZCBwdWJsaWMgZmVhdHJ1ZSIKZ2l0IHB1c2gKCmdpdCBjaGVja291dCBtYWluCmdpdCBjaGVja291dCAtYiBmZWF0dXJlLXByaXZhdGUKZWNobyAiQWRkaW5nIGFuIGF3ZXNvbWUgcHJpdnRhZSBleHBlcmltZW50LiIgPj4gbWFpbi5weQpnaXQgYWRkIG1haW4ucHkKZ2l0IGNvbW1pdCAtbSAiZmVhdDogYWRkIHByaXZ0YWUgZXhwZXJpbWVudCI=",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "011f7428-9d9e-4743-b921-45756a21ca22",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgLS0tIFBhcnQgMTogUHVibGljIEJyYW5jaCAoUmV2ZXJ0KSAtLS0KZ2l0IGNoZWNrb3V0IGZlYXR1cmUtcHVibGljCmdpdCByZXZlcnQgPGNvbW1pdC1oYXNoPgoKCiMgLS0tIFBhcnQgMjogUHJpdmF0ZSBCcmFuY2ggKFJlc2V0KSAtLS0KZ2l0IGNoZWNrb3V0IGZlYXR1cmUtcHJpdmF0ZQpnaXQgcmVzZXQgLS1oYXJkIEhFQUR+MQ==",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "10046a41-4f62-493e-9818-aef1dc432580",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "afd5a076-474c-4e12-b5f2-f99f26d9d982",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "cb309c53-0e58-4215-9cbe-7addf1b172ca",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "6b5778fc-88ca-4e7a-9150-0cee32c30775",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

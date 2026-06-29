@@ -1,0 +1,69 @@
+{
+  "key": "3d4db976-dc5b-47d9-9acc-cee4af41351b",
+  "name": "13: Collision Course",
+  "description": "",
+  "elements": [
+    {
+      "key": "1179166b-4459-429e-8c44-4c5c7b7b38be",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "15657570-dc17-4b6a-a1c5-eb601f31c38c",
+        "markdown": "# 13: Collision Course\n\nWhile you were deep in a flow state developing a new feature on the `feature/analytics` branch, the team discovered a critical memory leak in production. A hotfix branch (`hotfix/memory-leak`) was quickly spun up from `main`, and the bug was crushed. \n\nThe hotfix has already been safely merged back into `main`. However, your feature branch is now lagging behind, and you need to incorporate those critical stability fixes into your branch *before* you continue your work.\n\nYour task is to bring the changes from `main` into your current branch using a local merge.\n\n## Objectives\n\n1. Determine your current branch using `git branch`.\n2. Ensure you are on the `feature/analytics` branch.\n3. Merge the `main` branch into `feature/analytics`.\n4. A merge conflict will occur in `dashboard.py`. Open the file and resolve it:\n   * Keep the `optimize_memory()` routine from `main`.\n   * Keep your new `track_metrics()` routine from `feature/analytics`.\n\n## Helpful Hint\nBecause both branches modified the same area of `dashboard.py`, you will need to manually remove the `<<<<<<<`, `=======`, and `>>>>>>>` markers and arrange the two functions so they both exist in the final file.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "c33e5145-2931-4f5d-a524-d83ae916443f"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gJ2RlZiBzdGFydF9hcHAoKToKICAgIHByaW50KCJBcHBsaWNhdGlvbiBzdGFydGVkIiknID4gZGFzaGJvYXJkLnB5CgpnaXQgYWRkIGRhc2hib2FyZC5weQpnaXQgY29tbWl0IC1tICJjaG9yZTogaW5pdGlhbCBwcm9kdWN0aW9uIHJlbGVhc2UiCgpnaXQgY2hlY2tvdXQgLWIgZmVhdHVyZS9hbmFseXRpY3MKCmVjaG8gJ2RlZiBzdGFydF9hcHAoKToKICAgIHByaW50KCJBcHBsaWNhdGlvbiBzdGFydGVkIikKCmRlZiB0cmFja19tZXRyaWNzKCk6CiAgICBwcmludCgiVHJhY2tpbmcgdXNlciBlbmdhZ2VtZW50IG1ldHJpY3MiKScgPiBkYXNoYm9hcmQucHkKCmdpdCBhZGQgZGFzaGJvYXJkLnB5CmdpdCBjb21taXQgLW0gImZlYXQ6IGFkZCBhbmFseXRpY3MgdHJhY2tpbmcgZW5naW5lIgoKZ2l0IGNoZWNrb3V0IG1haW4KCmdpdCBjaGVja291dCAtYiBob3RmaXgvbWVtb3J5LWxlYWsKZWNobyAnZGVmIHN0YXJ0X2FwcCgpOgogICAgcHJpbnQoIkFwcGxpY2F0aW9uIHN0YXJ0ZWQiKQoKZGVmIG9wdGltaXplX21lbW9yeSgpOgogICAgcHJpbnQoIk1lbW9yeSBsZWFrIGNsZWFyZWQuIEdhcmJhZ2UgY29sbGVjdGlvbiBmb3JjZWQuIiknID4gZGFzaGJvYXJkLnB5CgpnaXQgYWRkIGRhc2hib2FyZC5weQpnaXQgY29tbWl0IC1tICJmaXg6IHJlc29sdmUgY3JpdGljYWwgcHJvZHVjdGlvbiBtZW1vcnkgbGVhayIKCmdpdCBjaGVja291dCBtYWluCmdpdCBtZXJnZSBob3RmaXgvbWVtb3J5LWxlYWsgLS1uby1mZiAtbSAibWVyZ2U6IHB1bGwgcmVxdWVzdCAjMTAxIGZyb20gaG90Zml4L21lbW9yeS1sZWFrIgpnaXQgYnJhbmNoIC1kIGhvdGZpeC9tZW1vcnktbGVhawoKZ2l0IGNoZWNrb3V0IGZlYXR1cmUvYW5hbHl0aWNz",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "7204dc3d-2180-4f55-9182-41f3ed11f72b",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gRG91YmxlIGNoZWNrIGN1cnJlbnQgYnJhbmNoCmdpdCBicmFuY2gKCiMgMi4gSW5pdGlhdGUgdGhlIGxvY2FsIG1lcmdlCmdpdCBtZXJnZSBtYWluCgojIDMuIFJlc29sdmUgdGhlIGNvbmZsaWN0IGluIGRhc2hib2FyZC5weQojIENvbWJpbmUgYm90aCBwaWVjZXMgb2YgbG9naWMgY2xlYW5seQplY2hvICdkZWYgc3RhcnRfYXBwKCk6CiAgICBwcmludCgiQXBwbGljYXRpb24gc3RhcnRlZCIpCgpkZWYgdHJhY2tfbWV0cmljcygpOgogICAgcHJpbnQoIlRyYWNraW5nIHVzZXIgZW5nYWdlbWVudCBtZXRyaWNzIikKCmRlZiBvcHRpbWl6ZV9tZW1vcnkoKToKICAgIHByaW50KCJNZW1vcnkgbGVhayBjbGVhcmVkLiBHYXJiYWdlIGNvbGxlY3Rpb24gZm9yY2VkLiIpJyA+IGRhc2hib2FyZC5weQoKIyA0LiBTdGFnZSB0aGUgcmVzb2x1dGlvbgpnaXQgYWRkIGRhc2hib2FyZC5weQo=",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "d3982674-82dc-44f8-8dd3-ae1231d7bce3",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "1cd94a08-bb6a-424b-a04d-39227231c7ae",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "1c16bab9-ff85-412f-a112-9dedb2e319ab",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "a76bd194-fdca-4490-b286-15164e01aea8",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

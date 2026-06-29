@@ -1,12 +1,15 @@
 #!/bin/bash
 
-echo "node_modules/" > .gitignore
-echo "print('Stable Application')" > app.py
-git add app.py .gitignore
-git commit -m "chore: initial repository setup" -q
-
-echo "print('Running billing service...')" > app.py
-echo "STRIPE_API_KEY=\"sk_prod_12345\"" >> app.py
-
+echo "import os" > app.py
 git add app.py
-git commit -m "feat: add stripe billing integration" -q
+git commit -m "Initial commit"
+
+echo "API_KEY='prod_live_sk_9481bc33f2a11b0c'" >> app.py
+git add app.py
+git commit -m "feat: implement payment gateway integration"
+
+git push
+
+git reset --hard HEAD~1
+
+git push -f

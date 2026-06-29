@@ -1,28 +1,28 @@
 {
-  "key": "90cf8bea-653a-4752-a678-0c71c205283d",
+  "key": "fe33fc88-cc7f-4be2-97a3-ea59a254b268",
   "name": "5: The Midnight Typo",
   "description": "",
   "elements": [
     {
-      "key": "bee3155d-995a-4192-8c45-4703601bb393",
+      "key": "cd125068-8b08-44f2-9013-439db787672d",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "2fbc87c6-ad73-4bc3-a2e2-5b6df8d2bdac",
+        "key": "1550bca6-5b71-450d-a3ed-8dfd71bc30e8",
         "markdown": "# 5: The Midnight Typo\n\nYou just committed a critical bug fix, but in your sleep-deprived state, you made two mistakes:\n1. You made a glaring typo in the commit message (`manger` instead of `manager`).\n2. You forgot to include the updated `config.json` file which actually enables the fix.\n\nInstead of making a second \"fix typo/oops\" commit, use Git's amendment powers to fix both issues in the *very last commit*.\n\n## Objectives\n\n1. Stage the forgotten `config.json` file.\n2. Amend the previous commit to include this file **and** fix the typo in the commit message.\n3. The final commit message should be: `\"fix: update manager config\"`",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "3af97507-e378-4c4d-9c22-a2a99600b834"
+          "key": "4489634e-f45b-4217-a7e9-83765f0d3443"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gJ3sidGltZW91dCI6IDMwfScgPiBjb25maWcuanNvbgplY2hvICJjbGFzcyBDb25uZWN0aW9uTWFuYWdlcjogcGFzcyIgPiBtYW5hZ2VyLnB5CmdpdCBhZGQgY29uZmlnLmpzb24gbWFuYWdlci5weQpnaXQgY29tbWl0IC1tICJjaG9yZTogaW5pdGlhbCBjb21taXQiCgplY2hvICJjbGFzcyBDb25uZWN0aW9uTWFuYWdlcjogZGVmIGNvbm5lY3Qoc2VsZik6IHBhc3MiID4gbWFuYWdlci5weQplY2hvICd7InRpbWVvdXQiOiA2MH0nID4gY29uZmlnLmpzb24KCmdpdCBhZGQgbWFuYWdlci5weQpnaXQgY29tbWl0IC1tICJmaXg6IHVwZGF0ZSBjb25uZWN0aW9uIG1hbmdlciBjb25maWd1cmF0aW9uIg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "de3a7b47-26e9-4b6c-bdb2-ddeb713f3954",
+            "key": "a53003bd-353b-4833-9a4d-0d227c048665",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,28 @@
             "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gU3RhZ2UgdGhlIGZvcmdvdHRlbiBjb25maWd1cmF0aW9uIGZpbGUKZ2l0IGFkZCBjb25maWcuanNvbgoKIyAyLiBBbWVuZCB0aGUgbGFzdCBjb21taXQgd2l0aCB0aGUgY29ycmVjdGVkIG1lc3NhZ2UgYW5kIHRoZSBuZXdseSBzdGFnZWQgZmlsZQpnaXQgY29tbWl0IC0tYW1lbmQgLW0gImZpeDogdXBkYXRlIGNvbm5lY3Rpb24gbWFuYWdlciBjb25maWd1cmF0aW9uIgoKIyAzLiBWZXJpZnkgdGhlIHJlc3VsdAplY2hvICItLS0gVXBkYXRlZCBMYXN0IENvbW1pdCBMb2cgLS0tIgpnaXQgbG9nIC0xIC0tc3RhdA==",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "57a7bae6-483d-4f8d-bd57-1342dd9d01ff",
+            "key": "68744010-a332-40ff-973c-1d5aadc36343",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "f483dd7d-f5e6-437d-8bea-ba6c54a5a084",
+            "key": "8ffd1dd2-721f-4106-9cca-7cd87c6beec4",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "8a066057-d39c-47e6-b2ca-60bcec2ddcd2",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "e458b404-7a7f-4934-96e3-07aa8d0e50fd",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

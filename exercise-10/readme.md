@@ -1,13 +1,13 @@
-# 10: The Leaked API Key
+# 10: The Phantom Ledger
 
-Your colleague Bob was debugging an integration late last night. In his haste, he hardcoded a live production Stripe API key into the source code and committed it directly to the branch. 
+You committed a live production API key into the codebase. To patch the leak quickly, you ran a hard reset (`git reset --hard HEAD~1`) and force-pushed to the remote repository. 
 
-If this branch gets pushed to GitHub, the key will be compromised instantly. Merely changing the code in a *new* commit isn't enough, because the key would still exist in the Git history. You need to use `git` to completely erase Bob's commit from the history, then safely store the API key where it belongs (in a `.env` file that is ignored by Git).
+Crisis averted—until your colleague drops a bomb: *That was our only copy of that legacy vendor key, and it takes 3 weeks to generate a new one. Staging is down until you get it back.*
 
-## Objectives
+The commit is gone from `git log`, the branch is rewritten, and your local workspace is wiped clean. However, Git secretly keeps a local record of your physical movements—a *phantom ledger* under the hood. Your mission is to find that lost commit and recover the key.
 
-1. Find the leaked API key.
-2. Use `git` to completely wipe Bob's commit from the history and your working directory (**Hint:** a `--hard` reset will destroy the commit and the file changes).
-3. Create a `.env` file and paste the API key inside it (`STRIPE_API_KEY=sk_prod_12345`).
-4. Ensure `.env` is added to a `.gitignore` file so it can never be tracked by accident.
-5. Commit the .gitignore file with the commit message `chore: added .env file`
+### Objectives
+
+1. Locate the hidden ledger of your local `HEAD` movements.
+2. Find the hash of the lost commit that contained the API key.
+3. Extract the key and save it to a new file named `recovered_key.txt`.

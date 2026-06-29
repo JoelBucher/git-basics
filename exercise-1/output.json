@@ -1,28 +1,28 @@
 {
-  "key": "8e5effca-bd1f-45a8-8038-0d0309409a3c",
+  "key": "2aa7e665-7d4f-4d2b-b6b5-effc71b408b9",
   "name": "1: Staging Area",
   "description": "",
   "elements": [
     {
-      "key": "c379ec86-58b0-4314-88da-bc7588f63076",
+      "key": "8b996635-7212-49f9-85f2-20603e01c383",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "f039b3b3-37aa-4d69-becb-c17959a8a402",
-        "markdown": "# 1: Staging Area\n\nSomeone ran `git add .` way too early! Right now, your staging area contains \nimportant fixes, temporary junk, and sensitive information that should *never* be committed to version control.\n\nYour task is to audit the staging area and fix it.\n\n## Objectives\n\n1. Run `git status` to see what is currently staged.\n2. Unstage `credentials.env` and `app.py.swp` so they are **not** part of the next commit.\n3. Ensure these files remain in your local directory (do not delete them from your computer, just untrack them from Git's staging area).\n4. Verify that only `app.py` and `notes.txt` are staged.\n5. Commit the changes with the message `\"fix: apply security patch and notes\"`.",
+        "key": "7e772b4e-e442-43c7-90ae-8ab14037e786",
+        "markdown": "# 1: Staging Area\n\nSomeone ran `git add .` way too early! Right now, your staging area contains \nimportant fixes, temporary junk, and sensitive information that should *never* be committed to version control.\n\nYour task is to audit the staging area and fix it.\n\n## Objectives\n\n1. Run `git status` to see what is currently staged.\n2. Unstage `credentials.env` and `app.py.swp` so they are **not** part of the next commit.\n3. Ensure these files remain in your local directory (do not delete them from your computer).\n4. Verify that only `app.py` and `notes.txt` are staged.\n5. Commit the changes with the message `\"fix: apply security patch and notes\"`.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "42b33afb-de72-4ddc-9886-94f4faf0b148"
+          "key": "300b5c53-d1b3-4bae-96cc-d68315a3fe3a"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCmVjaG8gIlN0YWJsZSBwcm9kdWN0aW9uIGNvZGUiID4gYXBwLnB5CmdpdCBhZGQgYXBwLnB5CmdpdCBjb21taXQgLW0gImNob3JlOiBpbml0aWFsIGNvbW1pdCIKCmVjaG8gImRlZiBzZWN1cmVfZml4KCk6IHBhc3MiID4+IGFwcC5weQplY2hvICJGaXggZGV0YWlscyBmb3IgcmVsZWFzZSBub3RlcyIgPiBub3Rlcy50eHQKZWNobyAiZGJfcGFzc3dvcmQ9U3VwZXJTZWNyZXQxMjMiID4gY3JlZGVudGlhbHMuZW52CmVjaG8gInRlbXAgZGF0YSIgPiBhcHAucHkuc3dwCgpnaXQgYWRkIC4=",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "e918ca1c-3057-43ef-93ca-f158490d65ac",
+            "key": "76a6f107-9bf6-4c76-911b-a0704b4a0912",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,28 @@
             "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBzdGF0dXMKZ2l0IHJtIC0tY2FjaGVkIGNyZWRlbnRpYWxzLmVudgpnaXQgcm0gLS1jYWNoZWQgYXBwLnB5LnN3cApnaXQgc3RhdHVzCmdpdCBjb21taXQgLW0gImZpeDogYXBwbHkgc2VjdXJpdHkgcGF0Y2ggYW5kIG5vdGVzIg==",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "33334e5b-bf83-444b-847c-ac8b5d677d1a",
+            "key": "70e5127e-41f6-4fcd-b26f-2693b2181808",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "8ab8eeae-d03e-416e-a90b-61d1a4f3122a",
+            "key": "456fc2d3-b05b-4d9c-b894-00b3b7bfecbb",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "98b02c1c-86fb-4268-ba1c-97d47f808e66",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "4379a951-38c3-4256-85b5-963b1f46bbc0",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

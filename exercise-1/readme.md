@@ -9,6 +9,6 @@ Your task is to audit the staging area and fix it.
 
 1. Run `git status` to see what is currently staged.
 2. Unstage `credentials.env` and `app.py.swp` so they are **not** part of the next commit.
-3. Ensure these files remain in your local directory (do not delete them from your computer, just untrack them from Git's staging area).
+3. Ensure these files remain in your local directory (do not delete them from your computer).
 4. Verify that only `app.py` and `notes.txt` are staged.
 5. Commit the changes with the message `"fix: apply security patch and notes"`.

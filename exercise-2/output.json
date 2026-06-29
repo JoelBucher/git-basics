@@ -1,28 +1,28 @@
 {
-  "key": "8f3aeef8-2b46-4487-bb50-287b33b9c15a",
+  "key": "0fffe550-639d-403a-9cc3-9a4c66326ae0",
   "name": "2: The Commit Mess",
   "description": "",
   "elements": [
     {
-      "key": "22d1c68e-17d7-459f-b04b-2ed2354c9ebf",
+      "key": "344a0d70-968c-4069-a1a3-1bc4c428a041",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "a17da67a-e49e-4a88-b774-0cba2a66f0b8",
+        "key": "f5ae611e-557b-42b7-8ed1-9082e248c066",
         "markdown": "# 2: The Commit Mess\n\nYou've been in \"the zone\" for the last two hours. You fixed a nasty bug in the payment logic, refactored some messy logging code, and updated the project's documentation. \n\nBut there's a problem: you haven't committed anything yet! If you run `git commit -a` right now, all of these unrelated changes will be lumped into a single, chaotic commit. Your team lead will not be happy during code review.\n\nYour task is to break these changes down into **three distinct, logical commits** using Git's staging area.\n\n## Objectives\n\n1. Review the current changes using `git status` and `git diff`.\n2. **Commit 1 (The Bugfix):** Stage *only* the change in `payment.py` and commit it with the message `\"fix: resolve payment processing timeout\"`.\n3. **Commit 2 (The Refactor):** Stage *only* the change in `logger.py` and commit it with the message `\"refactor: clean up verbose debug logs\"`.\n4. **Commit 3 (The Docs):** Stage the remaining change in `README.md` and commit it with the message `\"docs: update API endpoints documentation\"`.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "f8121935-bf50-4b75-ba33-49464c13c88a"
+          "key": "ad6147cf-79be-4ece-9682-cf676e5bac2c"
         },
         "setup": [
           {
-            "base64Content": "IyEvYmluL2Jhc2gKCiMgSW5pdGlhbGl6ZSBhIG5ldyByZXBvc2l0b3J5IGFuZCBjcmVhdGUgaW5pdGlhbCBzdGF0ZQpnaXQgaW5pdAplY2hvICJkZWYgcHJvY2Vzc19wYXltZW50KCk6IHBhc3MiID4gcGF5bWVudC5weQplY2hvICJkZWYgbG9nKG1zZyk6IHByaW50KG1zZykiID4gbG9nZ2VyLnB5CmVjaG8gIiMgUHJvamVjdCBBUEkiID4gUkVBRE1FLm1kCgpnaXQgYWRkIC4KZ2l0IGNvbW1pdCAtbSAiY2hvcmU6IGluaXRpYWwgcmVwb3NpdG9yeSBzZXR1cCIKCiMgU2ltdWxhdGUgdGhlICJtZWdhLWNoYW5nZSIgd29yayBzZXNzaW9uCmVjaG8gLWUgImRlZiBwcm9jZXNzX3BheW1lbnQoKTpcbiAgICAjIEZJWEVEOiBBZGRlZCB0aW1lb3V0IGhhbmRsaW5nXG4gICAgc2V0X3RpbWVvdXQoNSlcbiAgICBwYXNzIiA+IHBheW1lbnQucHkKZWNobyAtZSAiZGVmIGxvZyhtc2cpOlxuICAgICMgUkVGQUNUT1I6IFN0cmVhbWxpbmVkIGxvZ2dpbmdcbiAgICBpZiBjb25maWcuREVCVUc6IHByaW50KGYnW0xPR10ge21zZ30nKSIgPiBsb2dnZXIucHkKZWNobyAtZSAiIyBQcm9qZWN0IEFQSVxuXG4jIyBFbmRwb2ludHNcbi0gUE9TVCAvYXBpL3YxL2NoYXJnZSIgPiBSRUFETUUubWQ=",
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgSW5pdGlhbGl6ZSBhIG5ldyByZXBvc2l0b3J5IGFuZCBjcmVhdGUgaW5pdGlhbCBzdGF0ZQpnaXQgaW5pdAplY2hvICJkZWYgcHJvY2Vzc19wYXltZW50KCk6IHBhc3MiID4gcGF5bWVudC5weQplY2hvICJkZWYgbG9nKG1zZyk6IHByaW50KG1zZykiID4gbG9nZ2VyLnB5CmVjaG8gIiMgUHJvamVjdCBBUEkiID4gUkVBRE1FLm1kCgpnaXQgYWRkIC4KZ2l0IGNvbW1pdCAtbSAiY2hvcmU6IGluaXRpYWwgcmVwb3NpdG9yeSBzZXR1cCIKCiMgU2ltdWxhdGUgdGhlICJtZWdhLWNoYW5nZSIgd29yayBzZXNzaW9uCmVjaG8gImRlZiBwcm9jZXNzX3BheW1lbnQoKTpcbiAgICAjIEZJWEVEOiBBZGRlZCB0aW1lb3V0IGhhbmRsaW5nXG4gICAgc2V0X3RpbWVvdXQoNSlcbiAgICBwYXNzIiA+IHBheW1lbnQucHkKZWNobyAiZGVmIGxvZyhtc2cpOlxuICAgICMgUkVGQUNUT1I6IFN0cmVhbWxpbmVkIGxvZ2dpbmdcbiAgICBpZiBjb25maWcuREVCVUc6IHByaW50KGYnW0xPR10ge21zZ30nKSIgPiBsb2dnZXIucHkKZWNobyAiIyBQcm9qZWN0IEFQSVxuXG4jIyBFbmRwb2ludHNcbi0gUE9TVCAvYXBpL3YxL2NoYXJnZSIgPiBSRUFETUUubWQ=",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "364d5da8-a5b7-45a4-a7c0-aaf0055388b0",
+            "key": "26d9f4f4-9bb0-48a8-b2b5-da4a7af7d519",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,28 @@
             "base64Content": "IyEvYmluL2Jhc2gKCiMgQ2hlY2sgdGhlIGRhbWFnZQpnaXQgc3RhdHVzCgojIDEuIFN0YWdlIGFuZCBjb21taXQgdGhlIHBheW1lbnQgZml4CmdpdCBhZGQgcGF5bWVudC5weQpnaXQgY29tbWl0IC1tICJmaXg6IHJlc29sdmUgcGF5bWVudCBwcm9jZXNzaW5nIHRpbWVvdXQiCgojIDIuIFN0YWdlIGFuZCBjb21taXQgdGhlIGxvZ2dlciByZWZhY3RvcgpnaXQgYWRkIGxvZ2dlci5weQpnaXQgY29tbWl0IC1tICJyZWZhY3RvcjogY2xlYW4gdXAgdmVyYm9zZSBkZWJ1ZyBsb2dzIgoKIyAzLiBTdGFnZSBhbmQgY29tbWl0IHRoZSBkb2N1bWVudGF0aW9uIHVwZGF0ZXMKZ2l0IGFkZCBSRUFETUUubWQKZ2l0IGNvbW1pdCAtbSAiZG9jczogdXBkYXRlIEFQSSBlbmRwb2ludHMgZG9jdW1lbnRhdGlvbiIKCiMgNC4gVmVyaWZ5IHRoZSBjbGVhbiBoaXN0b3J5CmdpdCBsb2cgLS1vbmVsaW5l",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "ef73883a-7cd1-472c-bd82-f0ff9b85e3b9",
+            "key": "8a454f95-fb62-4420-8389-012902054fc9",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "17c6118e-960b-4e8f-8882-7b33a677aa5e",
+            "key": "0f4c83bb-0d65-4690-9ac8-579d251295e8",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "2d2c4a29-011a-4605-aeb3-3064d03e90d5",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "ab8f341f-2cc6-4c91-b896-7b7db8f9f865",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

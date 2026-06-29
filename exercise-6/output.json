@@ -1,28 +1,28 @@
 {
-  "key": "af60603b-a510-4518-ab73-8af71d672643",
+  "key": "6e19dfa9-c884-4587-a6e2-6549daef4d67",
   "name": "6: The Accidental Committer",
   "description": "",
   "elements": [
     {
-      "key": "56af8e22-707c-41de-8c8d-7e564536c22d",
+      "key": "33885179-741a-4f00-bf58-6ba6f2ff83ce",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "ffa6a972-8673-44ad-bb5f-38ccfbbdcee7",
+        "key": "dc63f08c-25dc-4a69-b818-c5426cfd2cfe",
         "markdown": "# 6: The Accidental Committer\n\nA developer on your team forgot to create their feature branch and accidentally committed a massive new feature directly to `main`. \n\nWorse, right in the middle of their accidental streak, they discovered and fixed a critical documentation typo (`fix: typo in index.html`). Production needs that typo fix immediately, but we cannot deploy the incomplete feature.\n\nWhen you are finished:\n* `main` should only contain the stable history up to `v1.0.0` plus the single typo fix commit.\n* `feature-alpha` should safely hold the entire work history for the new feature.\n\n## Objectives\n- Keep the documentation typo fix on `main`\n- Isolate all four `feature-alpha` commits onto their own dedicated branch named `feature-alpha`. \n",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "2e1909f2-4942-4bb9-bd8f-63c164323b4c"
+          "key": "964b2b3f-982a-4c1f-a1fe-2d587f3de1ea"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCiMgU2ltdWxhdGUgaW5pdGlhbCBwcm9kdWN0aW9uIHNldHVwCmVjaG8gIkluaXRpYWwgY29kZWJhc2UiID4gaW5kZXguaHRtbApnaXQgYWRkIGluZGV4Lmh0bWwKZ2l0IGNvbW1pdCAtbSAiSW5pdGlhbCBjb21taXQiCgojIENyZWF0ZSBhIHN0YWJsZSBoaXN0b3J5IG9uIG1haW4KZm9yIGkgaW4gezEuLjR9CmRvCiAgICBlY2hvICJTdGFibGUgdXBkYXRlICRpIiA+PiBpbmRleC5odG1sCiAgICBnaXQgY29tbWl0IC1hbSAiZG9jczogdXBkYXRlIGRvY3VtZW50YXRpb24gcGFydCAkaSIKZG9uZQoKIyBUYWcgdGhlIGxhc3Qgc3RhYmxlIHByb2R1Y3Rpb24gcmVsZWFzZQpnaXQgdGFnIHYxLjAuMAoKIyBBIGRldmVsb3BlciBmb3Jnb3QgdG8gc3dpdGNoIGJyYW5jaGVzIGFuZCBjb21taXR0ZWQgZGlyZWN0bHkgdG8gbWFpbgplY2hvICJGZWF0dXJlIGFscGhhIGNvcmUiID4gZmVhdHVyZV9hbHBoYS5weQpnaXQgYWRkIGZlYXR1cmVfYWxwaGEucHkKZ2l0IGNvbW1pdCAtbSAiZmVhdDogYmVnaW4gaW1wbGVtZW50YXRpb24gb2YgZmVhdHVyZSBhbHBoYSIKCmVjaG8gIkZlYXR1cmUgYWxwaGEgVUkiID4+IGZlYXR1cmVfYWxwaGEucHkKZ2l0IGNvbW1pdCAtYW0gImZlYXQ6IGFkZCBVSSBlbGVtZW50cyB0byBmZWF0dXJlIGFscGhhIgoKZWNobyAiQnVnZml4IGZvdW5kIGR1cmluZyBhbHBoYSB0ZXN0aW5nIiA+PiBpbmRleC5odG1sCmdpdCBjb21taXQgLWFtICJmaXg6IHR5cG8gaW4gaW5kZXguaHRtbCIKCmVjaG8gIkZlYXR1cmUgYWxwaGEgZG9jcyIgPj4gZmVhdHVyZV9hbHBoYS5weQpnaXQgY29tbWl0IC1hbSAiZG9jczogY29tcGxldGUgZmVhdHVyZSBhbHBoYSBkb2N1bWVudGF0aW9uIg==",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "aae72277-c4a0-4a22-8b36-7a3e48ed8291",
+            "key": "1c6bd2c8-b604-4858-8c0e-94a9d3ab9327",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,28 @@
             "base64Content": "IyEvYmluL2Jhc2gKCmdpdCBicmFuY2ggZmVhdHVyZS1hbHBoYQoKZ2l0IHJlc2V0IC0taGFyZCB2MS4wLjAKClRZUE9fU0hBPSQoZ2l0IGxvZyBmZWF0dXJlLWFscGhhIC0tZ3JlcD0iZml4OiB0eXBvIGluIGluZGV4Lmh0bWwiIC0tZm9ybWF0PSIlSCIpCmdpdCBjaGVycnktcGljayAkVFlQT19TSEE=",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "1ff06333-4a73-4b1e-b340-f7e2c8c847d5",
+            "key": "5d3ca1f9-cfcd-483b-8205-17a4f7a91cfb",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "7843b67f-9d60-4a5f-9ace-ef59da820caf",
+            "key": "ff02e039-82e8-489e-b7e0-a7d2d4ec5b92",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "79d41a30-756a-44c6-92f3-b5337ecfc1fc",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "4e10e1aa-a1f2-4717-9247-8d82bad167a2",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

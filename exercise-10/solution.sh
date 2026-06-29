@@ -1,12 +1,12 @@
 #!/bin/bash
 
-git log -p -1
+git reflog
 
-git reset --hard HEAD~1
+LOST_COMMIT_HASH=$(git reflog | grep "implement payment gateway" | head -n 1 | awk '{print $1}')
 
-echo "STRIPE_API_KEY=sk_prod_12345" > .env
+git show $LOST_COMMIT_HASH
 
-echo ".env" >> .gitignore
+git show $LOST_COMMIT_HASH:app.py | grep "API_KEY" | cut -d"'" -f2 > recovered_key.txt
 
-git add .gitignore
-git commit -m "chore: ignore env"
+echo "Success! Key recovered:"
+cat recovered_key.txt

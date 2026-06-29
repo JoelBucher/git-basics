@@ -1,0 +1,69 @@
+{
+  "key": "d00395d5-d6c4-4707-be69-c460e1064218",
+  "name": "11: Keep it Linear",
+  "description": "",
+  "elements": [
+    {
+      "key": "a4784f3b-23bd-4219-9d98-21066db5277d",
+      "page": 0,
+      "category": "SCENARIO",
+      "mode": "SOLO",
+      "display": "CODE",
+      "scenario": {
+        "category": "CODE",
+        "key": "8663d570-e0fe-48d8-a101-9de9572780f6",
+        "markdown": "# 11: Keep it Linear\n\nYou have been working on the `feature/analytics` branch and just finished up your code. Meanwhile, your colleague pushed a critical security fix directly to the `main` branch. \n\nYou need to bring your analytics branch up to date with `main` before submitting a Pull Request. However, your team has a strict policy against \"merge bubbles\" and unnecessary merge commits.\n\n## Objectives\n\n1. Update your feature branch so that it sits directly *on top* of the new security fix from `main`.\n2. Update main, such that it incorporates your feature branch changes. \n\nHint: At the end both your feature branch and the main branch should point to the same commit.",
+        "condition": {
+          "category": "EMPTY_CONDITION",
+          "key": "bdf4c72a-e4e5-4108-ac74-886fdcc7d6ed"
+        },
+        "setup": [
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCiMgSW5pdGlhbGl6ZSByZXBvc2l0b3J5IGFuZCBtYWtlIGluaXRpYWwgY29tbWl0CmVjaG8gInByaW50KCdBcHAgaXMgcnVubmluZycpIiA+IGRhc2hib2FyZC5weQpnaXQgYWRkIGRhc2hib2FyZC5weQpnaXQgY29tbWl0IC1tICJpbml0aWFsIGNvbW1pdCIKCiMgQ3JlYXRlIGFuZCBzd2l0Y2ggdG8gdGhlIGZlYXR1cmUgYnJhbmNoCmdpdCBjaGVja291dCAtYiBmZWF0dXJlL2FuYWx5dGljcwplY2hvICJwcmludCgnQW5hbHl0aWNzIHRyYWNraW5nIGluaXRpYWxpemVkJykiID4+IGRhc2hib2FyZC5weQpnaXQgYWRkIGRhc2hib2FyZC5weQpnaXQgY29tbWl0IC1tICJmZWF0OiBhZGQgYmFzaWMgYW5hbHl0aWNzIHRyYWNraW5nIgoKZWNobyAicHJpbnQoJ0V4cG9ydGluZyByZXBvcnQgdG8gQ1NWJykiID4gcmVwb3J0LnB5CmdpdCBhZGQgcmVwb3J0LnB5CmdpdCBjb21taXQgLW0gImZlYXQ6IGFkZCBDU1YgcmVwb3J0IGV4cG9ydGVyIgoKIyBTd2l0Y2ggYmFjayB0byBtYWluIGFuZCBzaW11bGF0ZSBhIGNvbmN1cnJlbnQgZml4IGZyb20gYSBjb2xsZWFndWUKZ2l0IGNoZWNrb3V0IG1haW4KZWNobyAicHJpbnQoJ1NFQ1VSSVRZOiBJbnB1dCBzYW5pdGl6ZWQnKSIgPj4gZGFzaGJvYXJkLnB5CmdpdCBhZGQgZGFzaGJvYXJkLnB5CmdpdCBjb21taXQgLW0gImZpeDogc2FuaXRpemUgdXNlciBpbnB1dCB0byBwcmV2ZW50IFhTUyIKCiMgTGVhdmUgdGhlIHVzZXIgb24gdGhlIGZlYXR1cmUgYnJhbmNoIHRvIHN0YXJ0IHRoZSBleGVyY2lzZQpnaXQgY2hlY2tvdXQgZmVhdHVyZS9hbmFseXRpY3M=",
+            "filename": "setup.sh",
+            "category": "FILE",
+            "key": "ef44247a-9640-4188-9f64-9218b215de23",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "base64Content": "IyEvYmluL2Jhc2gKCmdpdCByZWJhc2UgbWFpbgoKZWNobyAtZSAicHJpbnQoJ0FwcCBpcyBydW5uaW5nJylcbnByaW50KCdTRUNVUklUWTogSW5wdXQgc2FuaXRpemVkJylcbnByaW50KCdBbmFseXRpY3MgdHJhY2tpbmcgaW5pdGlhbGl6ZWQnKSIgPiBkYXNoYm9hcmQucHkKCmdpdCBhZGQgZGFzaGJvYXJkLnB5CgpnaXQgcmViYXNlIC0tY29udGludWUKCmdpdCBjaGVja291dCBtYWluCmdpdCByZWJhc2UgZmVhdHVyZS9hbmFseXRpY3M=",
+            "filename": "solution.sh",
+            "category": "FILE",
+            "key": "35d0e763-7417-4d5e-9a7c-1806a3db5133",
+            "isRemoteUser": true,
+            "remoteUserName": "system"
+          },
+          {
+            "value": "sh ../system/setup.sh",
+            "category": "DEFAULT",
+            "key": "e2955599-7354-4312-9017-1bbb87bce3a9",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "8347f4b9-75f2-4361-8bc4-5448ffce3a83",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "32ac0317-bf4e-4998-bcb9-c5d4bd4bd359",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          }
+        ]
+      },
+      "components": [
+        "DESCRIPTION",
+        "FILE_EDITOR",
+        "TREE",
+        "HELP"
+      ],
+      "validateOnSubmit": false
+    }
+  ]
+}

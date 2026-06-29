@@ -1,28 +1,28 @@
 {
-  "key": "5416d344-db3a-44c5-aee9-51bb1228b0ed",
+  "key": "96f0e728-f904-4794-88a9-dd367c95a851",
   "name": "4: The Silent Clutter",
   "description": "",
   "elements": [
     {
-      "key": "e0573a0d-2d75-4d68-8d49-bea0f3df6bc8",
+      "key": "a5af5b66-39fa-416c-949a-5379224c8192",
       "page": 0,
       "category": "SCENARIO",
       "mode": "SOLO",
       "display": "CODE",
       "scenario": {
         "category": "CODE",
-        "key": "578b1723-61a4-4761-afee-376b8b12e0e1",
+        "key": "d6dd8d9a-da74-4c55-b197-25a30fe3c78b",
         "markdown": "# 4: The Silent Clutter\n\nYou just pulled the latest changes from your team, and you are ready to start coding. However, your teammate works on a macOS machine and accidentally left a trail of `.DS_Store` files in the repository. To make matters worse, your own local text editor just generated some temporary log files (`debug.log`) that you don't want to track either.\n\nIf you run `git status`, you'll see a mix of system clutter, logs, and actual project work. Your goal is to clean up the repository, untrack the system files without deleting them from your machine, and configure Git so this never happens again.\n\n## Objectives\n\n1. Identify which files are currently being tracked by Git vs. which ones are untracked.\n2. Remove the existing `.DS_Store` file from Git's tracking *without* deleting it from your actual file system.\n3. Create a `.gitignore` file at the root of the repository.\n4. Configure the `.gitignore` to permanently ignore:\n   * All `.DS_Store` files anywhere in the project.\n   * All files ending in `.log`.\n5. Verify that your `git status` looks clean (only showing your intended changes and the new `.gitignore`).\n6. Stage and commit your `.gitignore` and the removal of the clutter with the message `\"chore: added gitignore\"`.",
         "condition": {
           "category": "EMPTY_CONDITION",
-          "key": "7dc71999-82f1-443e-881e-050d5b781e8b"
+          "key": "cc7d4955-e0b2-41b7-aea9-d106b49be436"
         },
         "setup": [
           {
             "base64Content": "IyEvYmluL2Jhc2gKCm1rZGlyIC1wIHNyYy91dGlscwplY2hvICJjb25zb2xlLmxvZygnSGVsbG8gV29ybGQnKTsiID4gc3JjL2luZGV4LmpzCmVjaG8gImZ1bmN0aW9uIGhlbHBlcigpIHt9IiA+IHNyYy91dGlscy9oZWxwZXIuanMKCmVjaG8gIm1hY09TIG1ldGFkYXRhIiA+IC5EU19TdG9yZQpnaXQgYWRkIHNyYy9pbmRleC5qcyBzcmMvdXRpbHMvaGVscGVyLmpzIC5EU19TdG9yZQpnaXQgY29tbWl0IC1tICJJbml0aWFsIGNvbW1pdCB3aXRoIHByb2plY3Qgc3RydWN0dXJlIgoKZWNobyAic29tZSBsb2NhbCBkZWJ1ZyBpbmZvIiA+IGRlYnVnLmxvZwplY2hvICJtb3JlIG1hY09TIG1ldGFkYXRhIiA+IHNyYy91dGlscy8uRFNfU3RvcmU=",
             "filename": "setup.sh",
             "category": "FILE",
-            "key": "bb4dd139-4bc1-4973-bc46-deaa4a315d8e",
+            "key": "08d1c70c-0026-4399-8308-f0995f7ce186",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
@@ -30,14 +30,28 @@
             "base64Content": "IyEvYmluL2Jhc2gKCiMgMS4gVW50cmFjayB0aGUgLkRTX1N0b3JlIGZpbGUgdGhhdCB3YXMgYWxyZWFkeSBjb21taXR0ZWQgCiMgKHVzaW5nIC0tY2FjaGVkIGtlZXBzIHRoZSBmaWxlIG9uIHlvdXIgaGFyZCBkcml2ZSkKZ2l0IHJtIC0tY2FjaGVkIC5EU19TdG9yZQoKZWNobyAiLkRTX1N0b3JlIiA+IC5naXRpZ25vcmUKZWNobyAiKiovLkRTX1N0b3JlIiA+PiAuZ2l0aWdub3JlCmVjaG8gIioubG9nIiA+PiAuZ2l0aWdub3JlCgpnaXQgc3RhdHVzCgpnaXQgYWRkIC5naXRpZ25vcmUgLkRTX1N0b3JlCgpnaXQgY29tbWl0IC1tICJjaG9yZTogYWRkIGdpdGlnbm9yZSBhbmQgdW50cmFjayBzeXN0ZW0gY2x1dHRlciI=",
             "filename": "solution.sh",
             "category": "FILE",
-            "key": "23077e1f-9469-4c3e-8f21-b226a78304d6",
+            "key": "79f68c93-38c1-41b4-a66a-b9c2236a228e",
             "isRemoteUser": true,
             "remoteUserName": "system"
           },
           {
             "value": "sh ../system/setup.sh",
             "category": "DEFAULT",
-            "key": "e48d61bd-76c4-44cb-9946-a32a3f1664be",
+            "key": "5efd5f0b-4b88-4a8c-bf5e-d6cf83194776",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "touch FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "9926c400-8a2b-43e5-8940-b0ef6a1ef4fd",
+            "isRemoteUser": false,
+            "remoteUserName": "local"
+          },
+          {
+            "value": "rm FILE_TO_BE_REMOVED",
+            "category": "DEFAULT",
+            "key": "bab7f5bf-e50b-4edd-a14d-497cc608eec5",
             "isRemoteUser": false,
             "remoteUserName": "local"
           }

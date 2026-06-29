@@ -133,6 +133,20 @@ def process_directories(root_dir_path):
                                     "isRemoteUser": False,
                                     "remoteUserName": "local"
                                 },
+                                {
+                                    "value": "touch FILE_TO_BE_REMOVED",
+                                    "category": "DEFAULT",
+                                    "key": generate_uuid(),
+                                    "isRemoteUser": False,
+                                    "remoteUserName": "local"
+                                },
+                                {
+                                    "value": "rm FILE_TO_BE_REMOVED",
+                                    "category": "DEFAULT",
+                                    "key": generate_uuid(),
+                                    "isRemoteUser": False,
+                                    "remoteUserName": "local"
+                                }
                             ],
                         },
                         "components": [
